@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>Subnetting</title>
+    </head>
+    <body>
+        <div class="intro">
+            <h1 class="logo-header">
+                <span class="logo">SUBNE</span><span class="logo">TTING</span>
+            </h1>
+        </div>
+        <header>
+            <h4> SUBNETTING</h4>
+        </header>
+        <div class="main">
+            <main>
+                <h1>Pengertian Subnetting</h1>
+                <p>Subnetting adalah teknik yang digunakan untuk membagi suatu jaringan (jaringan komputer) menjadi beberapa subnet yang lebih kecil.
+                Subnetting hanya dapat dilakukan untuk alamat IP Kelas A, B, dan C. Pada dasarnya, subnetting merupakan aktivitas untuk mengambil bit-bit
+                dari bagian host alamat IP dan me-reserve atau menyimpannya sebagai alat untuk mendefinisikan alamat subnet. Konsekuensinya yaitu semakin
+                sedikit jumlah bit untuk host. Sehingga dapat disimpulkan bahwa semakin banyak jumlah subnet, maka semakin sedikit jumlah bit yang tersedia
+                untuk mendefinisikan hostbit tersebut.</p>
+                <p>Subnetting memungkinkan kita membuat jaringan dengan batas host yang lebih realistis. Subnetting menyediakan cara yang lebih fleksibel
+                untuk menentukan bagian mana dari alamat IP 32-bit yang mewakili nama domain dan bagian mana yang mewakili ID host. Hanya 3 kemungkinan
+                nama domain yang tersedia di kelas alamat IP standar: 8 bit di kelas A, 16 bit di kelas B dan 24 bit di kelas C.</p>
+                <br />
+                <h1>Fungsi Subnetting</h1>
+                <div style="text-align: justify;">
+                    <ul>
+                        <li>
+                            Membantu mengembangkan jaringan ke jarak geografis yang menjauh.
+                        </li>
+                        <li>
+                            Mengurangi lalu lintas jaringan sehingga data yang lewat di perusahaan tidak akan terjadi collision atau tabrakan data.
+                        </li>
+                        <li>
+                            Kerja jaringan bisa lebih dioptimalkan.
+                        </li>
+                        <li>
+                            Membuat pengelolaan jaringan jadi lebih sederhana.
+                        </li>
+                    </ul>
+                </div>
+            </main>
+            <aside class="kanan">
+                <div id="card"> 
+                    <div id="card-content">
+                        <div id="card-title">
+                            <h2>IP Subnet Kalkulator</h2>
+                            <div class="underline-title"></div>
+                        </div>
+                        Masukan IP Address
+                        <input type="text" class="addr" id="q1"> .
+                        <input type="text" class="addr" id="q2"> .
+                        <input type="text" class="addr" id="q3"> .
+                        <input type="text" class="addr" id="q4"> /
+                        <input type="text" class="addr" id="cidr">
+                        <button onclick='Hasil();'>Hasil</button>
+                        <hr>
+                        <div class="hasil">
+                            <span class=label>IP Address :</span>
+                            <span class=value id=resIP></span>
+                        </div>
+                        <div class="hasil">
+                            <span class=label>Subnet mask :</span>
+                            <span class=value id=resMask></span>
+                        </div>
+                        <div class="hasil">
+                            <span class=label>Net Address :</span>
+                            <span class=value id=resNet></span>
+                        </div>
+                        <div class="hasil">
+                            <span class=label>Broadcast Address :</span>
+                            <span class=value id=resBC></span>
+                        </div>
+                        <div class="hasil">
+                            <span class=label>Standard Class :</span>
+                            <span class=value id=resClass></span>
+                        </div>
+                        <div class="hasil">
+                            <span class=label>Range :</span>
+                            <span class=value id=resRange></span>
+                        </div>
+                        <div class="hasil">
+                            <span class=label>IP Binary :</span>
+                            <span class=value id=resBinIP></span>
+                        </div>
+                        <div class="hasil">
+                            <span class=label>Mask Binary :</span>
+                            <span class=value id=resBinMask></span>
+                        </div>
+                        <div class="hasil">
+                            <span class=label>Net Address Binary :</span>
+                            <span class=value id=resBinNet></span>
+                        </div>
+                        <div class="hasil">
+                            <span class=label>BC Address Binary :</span>
+                            <span class=value id=resBinBC></span>
+                        </div>
+                </div>
+            </aside>
+            </div>
+        </div>
+        <div class="row">
+            <div class="bawah">
+                <h1>Tujuan Subnetting</h1>
+                <div style="text-align: justify;"></div>
+                <p>Tujuan dari subnetting adalah sebagai berikut:</p>
+                <ul>
+                    <li>
+                        Agar lebih efisien pada saat pengalamatan jaringan.
+                    </li>
+                    <li>
+                        Membagi suatu kelas jaringan menjadi jaringan-jaringan yang lebih kecil.
+                    </li>
+                    <li>
+                        Untuk mengatasi masalah perbedaan antara hardware dengan topologi fisik jaringan.
+                    </li>
+                    <li>
+                        Memudahkan saat mengalokasikan IP Address dalam sebuah jaringan agar bisa memaksimalkan penggunaan IP Address.
+                    </li>
+                    <li>
+                        Untuk meningkatkan keamanan dan mengurangi resiko terjadinya perlambatan yang terjadi pada jalu paket-paket
+                        data(congestion) akibat terlalu banyak host dalam suatu jaringan.
+                    </li>
+                    <li>
+                        Untuk mengatasi masalah perbedaan hardware dan media firik yang di gunakan dalam suatu jaringan.
+                    </li>
+                </ul>
+                <p style="text-align: center;"><img src="/image/jalan.png" width="470" height="200" alt="jalan"/> </p>
+                <h1>Konsep subnetting</h1>
+                <p>Untuk menjelaskan konsep subnetting, kita akan menggunakan analogi sebuah jalan bernama jalan merdeka, dimana
+                jalan ini memiliki beberapa rumah yang memiliki nomor rumah 1-8, dimana rumah nomor 8 adalah rumah ketua RT yang
+                memiliki tugas mengumumkan informasi apapun kepada seluruh rumah di wilayah sekitar jalan merdeka.</p>
+                <p>Ketika mulai banyak rumah di sekitar wilayah tersebut, maka akan memungkinkan terjadi timbulnya kemacetan atau
+                tatanan yang tidak teratur. Oleh karena itu kemudian posisi rumah-rumah baru tersebut diubah dengan menambahkan
+                gang-gang dimana di dalam gang tersebut memiliki beberapa rumah dan masing-masing gang mempunyai ketua RT. Sehingga
+                cara tersebut dapat menghindari resiko kemacetan, efisien dan optimalisasi transportasi dan juga setiap gang memiliki
+                keuntungannya sendiri-sendiri dalam mengelola wilayahnya.</p>
+                <br>
+                <p style="text-align: center;"><img src="/image/Jalan Merdeka.png" width="400" height="300" alt="jalan"/> </p>
+                <br/>
+                <p>Setidaknya seperti itulah konsep subnetting. Disatu sisi ingin mempermudah pengelolaan, misalnya suatu kantor ingin
+                membagi kerja menjadi 3 divisi dengan masing-masing divisi memiliki 15 komputer (host). Disisi lain juga untuk optimalisasi
+                dan efisiensi kerja jaringan, karena jalur lalu lintas tidak terpusat di satu network besar, tapi terbagi ke beberapa
+                ruas-ruas gang. Yang pertama analogi Jl Gatot Subroto dengan rumah disekitarnya dapat diterapkan untuk jaringan adalah
+                seperti NETWORK ADDRESS (nama jalan) dan HOST ADDRESS (nomer rumah). Sedangkan Ketua RT diperankan oleh BROADCAST ADDRESS
+                (192.168.1.255), yang bertugas mengirimkan message ke semua host yang ada di network tersebut.</p>
+            </div>
+            <footer>
+                footer
+            </footer>
+    </body>
+    <script src="JS/script.js"></script>
+</html>
